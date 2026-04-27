@@ -11,7 +11,7 @@ def recv_utf8(conn: socket.socket) -> str | None:
 
 
 def send_utf8(conn: socket.socket, msg: str) -> None:
-    conn.sendall(msg.encode("utf-8"))
+    conn.sendall((msg + "\n").encode("utf-8"))
 
 
 def main() -> None:
